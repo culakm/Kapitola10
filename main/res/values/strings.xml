@@ -3,6 +3,10 @@
 
     <string name="app_name">Kapitola10</string>
     <string name="hello_world">Hello world!</string>
+    <string name="hello_world_a2">Hello world activity 2!</string>
+    <string name="hello_world_a3">Hello world activity 3!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_activity2">activity2</string>
+    <string name="title_activity_activity3">activity3</string>
 
 </resources>
