@@ -1,39 +1,49 @@
 package com.hellbilling.kapitola10;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.Gravity;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 
 
-public class Kapitola10 extends ActionBarActivity {
+public class Kapitola10 extends Activity
+        implements RadioGroup.OnCheckedChangeListener {
+    RadioGroup orientation;
+    RadioGroup gravity;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
         setContentView(R.layout.activity_kapitola10);
+
+        orientation=(RadioGroup)findViewById(R.id.orientation);
+        orientation.setOnCheckedChangeListener(this);
+        gravity=(RadioGroup)findViewById(R.id.gravity);
+        gravity.setOnCheckedChangeListener(this);
     }
 
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.horizontal:
+                orientation.setOrientation(LinearLayout.HORIZONTAL);
+                break;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_kapitola10, menu);
-        return true;
-    }
+            case R.id.vertical:
+                orientation.setOrientation(LinearLayout.VERTICAL);
+                break;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+            case R.id.left:
+                gravity.setGravity(Gravity.LEFT);
+                break;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            case R.id.center:
+                gravity.setGravity(Gravity.CENTER_HORIZONTAL);
+                break;
+
+            case R.id.right:
+                gravity.setGravity(Gravity.RIGHT);
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
