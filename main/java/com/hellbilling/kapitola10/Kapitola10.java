@@ -56,20 +56,19 @@ public class Kapitola10 extends Activity
 
         // Is the button now checked?
 
-        //Intent intent = new Intent(this, activity3.class);
-        Toast.makeText(getApplicationContext(), " PAKO  "+ gravity.getId() + " vs. " + R.id.left, Toast.LENGTH_SHORT).show();
+        Intent intent;
         switch(gravity.getCheckedRadioButtonId()) {
             case R.id.left:
               //  if (checked)
                 Toast.makeText(getApplicationContext(), " activity 2 ", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(this, activity2.class);
-                startActivity(intent2);
+                intent = new Intent(this, activity2.class);
+                startActivity(intent);
                 break;
             case R.id.center:
                 //if (checked)
                 Toast.makeText(getApplicationContext(), " activity 3 ", Toast.LENGTH_SHORT).show();
-                Intent intent3 = new Intent(this, activity2.class);
-                startActivity(intent3);
+                intent = new Intent(this, activity3.class);
+                startActivity(intent);
                 break;
             case R.id.right:
                 //if (checked)
