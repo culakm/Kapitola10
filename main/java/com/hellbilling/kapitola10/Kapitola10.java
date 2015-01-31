@@ -3,80 +3,42 @@ package com.hellbilling.kapitola10;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
-public class Kapitola10 extends Activity
-        implements RadioGroup.OnCheckedChangeListener{
-    RadioGroup orientation;
-    RadioGroup gravity;
+public class Kapitola10 extends Activity{
+
+    RadioGroup activities1;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_kapitola10);
 
-        orientation=(RadioGroup)findViewById(R.id.orientation);
-        orientation.setOnCheckedChangeListener(this);
-        gravity=(RadioGroup)findViewById(R.id.gravity);
-        gravity.setOnCheckedChangeListener(this);
-    }
-
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
-        switch (checkedId) {
-            case R.id.horizontal:
-                orientation.setOrientation(LinearLayout.HORIZONTAL);
-                break;
-
-            case R.id.vertical:
-                orientation.setOrientation(LinearLayout.VERTICAL);
-                break;
-
-            case R.id.left:
-                gravity.setGravity(Gravity.LEFT);
-                break;
-
-            case R.id.center:
-                gravity.setGravity(Gravity.CENTER_HORIZONTAL);
-                break;
-
-            case R.id.right:
-                gravity.setGravity(Gravity.RIGHT);
-                break;
-        }
+        activities1=(RadioGroup)findViewById(R.id.activities1);
+        //activities1.setOnCheckedChangeListener(this);
     }
 
     public void mcSetActivity(View view) {
-
-        // Is the button now checked?
-
         Intent intent;
-        switch(gravity.getCheckedRadioButtonId()) {
-            case R.id.left:
-              //  if (checked)
+        switch(activities1.getCheckedRadioButtonId()) {
+            case R.id.act1_1:
+                Toast.makeText(getApplicationContext(), " activity 1 ", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, activity1.class);
+                startActivity(intent);
+                break;
+            case R.id.act1_2:
                 Toast.makeText(getApplicationContext(), " activity 2 ", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, activity2.class);
                 startActivity(intent);
                 break;
-            case R.id.center:
-                //if (checked)
+            case R.id.act1_3:
                 Toast.makeText(getApplicationContext(), " activity 3 ", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, activity3.class);
                 startActivity(intent);
                 break;
-            case R.id.right:
-                //if (checked)
-                //Intent intent = new Intent(this, activity3.class);
-                break;
         }
-
-
-
     }
 }
