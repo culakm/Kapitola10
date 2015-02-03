@@ -34,9 +34,29 @@ public class Kapitola10 extends Activity{
                 intent = new Intent(this, activity2.class);
                 startActivity(intent);
                 break;
-            case R.id.act1_3:
+            case R.id.act2_1:
                 Toast.makeText(getApplicationContext(), " activity 3 ", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this, activity3.class);
+                startActivity(intent);
+                break;
+            case R.id.act2_2:
+                Toast.makeText(getApplicationContext(), " activity 4 ", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, activity4.class);
+                startActivity(intent);
+                break;
+            case R.id.act3_1:
+                Toast.makeText(getApplicationContext(), " activity 5 ", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, activity5.class);
+                startActivity(intent);
+                break;
+            case R.id.act3_2:
+                Toast.makeText(getApplicationContext(), " activity 6 ", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, activity6.class);
+                startActivity(intent);
+                break;
+            case R.id.act3_3:
+                Toast.makeText(getApplicationContext(), " activity 7 ", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, activity7.class);
                 startActivity(intent);
                 break;
         }

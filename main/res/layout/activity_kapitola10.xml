@@ -6,16 +6,45 @@
     android:layout_height="fill_parent"
     >
     <RadioGroup android:id="@+id/activities1"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dip">
         <RadioButton
             android:id="@+id/act1_1"
-            android:text="@string/title_activity_activity1"  />
+            android:text="@string/title_activity_activity1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
         <RadioButton
             android:id="@+id/act1_2"
-            android:text="@string/title_activity_activity2"  />
+            android:text="@string/title_activity_activity2"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+        <RadioButton
+            android:id="@+id/act2_1"
+            android:text="@string/title_activity_activity3"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+        <RadioButton
+            android:id="@+id/act2_2"
+            android:text="@string/title_activity_activity4"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+        <RadioButton
+            android:id="@+id/act3_1"
+            android:text="@string/title_activity_activity5"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+        <RadioButton
+            android:id="@+id/act3_2"
+            android:text="@string/title_activity_activity6"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+        <RadioButton
+            android:id="@+id/act3_3"
+            android:text="@string/title_activity_activity7"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
     </RadioGroup>
     <Button
         android:layout_width="wrap_content"
